@@ -79,8 +79,7 @@ def main():
     wrong_pred = 0
     correct_pred = 0
     predictions=[]
-    k =3
-    #k = int(input()) # user choose a number for the K_NN classifier
+    k = int(input()) # user choose a number for the K_NN classifier
     for x in range(len(testSet)):
         neighbors = getNeighbors(trainingSet, testSet[x], k)
         result = getResponse(neighbors)
@@ -90,9 +89,5 @@ def main():
         else:
             correct_pred = correct_pred + 1
         print('> predicted=' + repr(result) + ', actual=' + repr(testSet[x][-1]))
-    accuracy = getAccuracy(testSet, predictions)
-    print('Wrong prediction(testing examples):' + repr(wrong_pred))
-    print('Correct prediction(testing examples):' + repr(correct_pred))
-    print('Accuracy:' + repr(accuracy) + '%')
 
 main()
