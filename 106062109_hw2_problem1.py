@@ -65,7 +65,7 @@ def main():
     #iris = datasets.load_iris()
     trainingSet=[]
     testSet=[]
-    split = 0.6
+    split = 0.67
     
     f = open('iris.data.txt', "r")
     lines = f.readlines()
@@ -76,18 +76,29 @@ def main():
     print('Train set:' + repr(len(trainingSet)))
     print('Test set:' + repr(len(testSet)))
     # generate predictions
-    wrong_pred = 0
-    correct_pred = 0
     predictions=[]
+    print("Input the K:")
     k = int(input()) # user choose a number for the K_NN classifier
+    print("---------------Iris dataset result:--------------")
     for x in range(len(testSet)):
         neighbors = getNeighbors(trainingSet, testSet[x], k)
         result = getResponse(neighbors)
         predictions.append(result)
-        if result != testSet[x][-1]:
-            wrong_pred = wrong_pred + 1
-        else:
-            correct_pred = correct_pred + 1
         print('> predicted=' + repr(result) + ', actual=' + repr(testSet[x][-1]))
-
+    
+    print("Input which object you want to predict:")
+    print("If you want to stop the prediction, please type \"-1\"when entering k's value, thank you~")
+    while(k!= -1 ):
+        print("Input the K:")
+        k = int(input()) 
+        test_ob = [float(input()), float(input()), float(input()), float(input())]
+        ob_result = ""
+        print("-------------Here is your object predict result:-------------")
+        ob_predictions=[]
+        ob_neighbors = getNeighbors(trainingSet, test_ob, k)
+        ob_result = getResponse(ob_neighbors)
+        ob_predictions.append(ob_result)        
+        print("The object is predicted as:", ob_result)
+    
+    print("thank you~")
 main()
