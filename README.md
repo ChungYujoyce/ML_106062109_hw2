@@ -45,13 +45,20 @@
            
 ### 6. Main()
 Problem 1:
-
+* 1. Users input k
+* 2. Display iris-dataset prediction
+* 3. Users input k again
+* 4. Users input each factors of an object
+* 5. For each test case:
+    *   Get all its neighbors distance
+    *   Get the votes by its neighbors
+    *   Do the prediction 
+* 6. If want to stop, users should enter k=-1 
  
 Problem 2:
-
-    1. print the number of trainset , testset 
-    2. For each test case:
-        1. Get all its neighbors distance
-        2. Get the votes by its neighbors
-        3. Do the prediction 
-    3. Print the accuracy, number of wrong-predicted cases and correct-predicted cases
+* 1. print the number of trainset , testset 
+* 2. For each test case:
+    *   Get all its neighbors distance
+    *   Get the votes by its neighbors
+    *   Do the prediction 
+* 3. Print the accuracy, numbers of wrong-predicted cases and correct-predicted cases
