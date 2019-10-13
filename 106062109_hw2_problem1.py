@@ -88,9 +88,11 @@ def main():
     
     print("Input which object you want to predict:")
     print("If you want to stop the prediction, please type \"-1\"when entering k's value, thank you~")
-    while(k!= -1 ):
+    while(1):
         print("Input the K:")
         k = int(input()) 
+        if k == -1:
+            break
         test_ob = [float(input()), float(input()), float(input()), float(input())]
         ob_result = ""
         print("-------------Here is your object predict result:-------------")
