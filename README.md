@@ -54,7 +54,11 @@ Problem 1:
     *   Get the votes by its neighbors
     *   Do the prediction 
 * 6. If want to stop, users should enter k=-1 
- 
+###### A part of iris-dataset result
+![](https://i.imgur.com/Y1vXQpf.jpg)
+###### Users input object prediction
+![](https://i.imgur.com/LiQJnsp.jpg)
+
 Problem 2:
 * 1. print the number of trainset , testset 
 * 2. For each test case:
@@ -62,3 +66,5 @@ Problem 2:
     *   Get the votes by its neighbors
     *   Do the prediction 
 * 3. Print the accuracy, numbers of wrong-predicted cases and correct-predicted cases
+###### Accuracy & wrong/correct prediction ratio
+![](https://i.imgur.com/1k3f741.jpg)
