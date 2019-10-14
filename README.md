@@ -6,7 +6,7 @@
 * LoadDataSet
     1. load iris.data.txt file 
         * Since it's a string list, I have to consume the characters 3 at once and change it to float
-        * str type can't do assignment
+        * str type can't do assignment, so can't write like this: `dataset[x][y] = float(dataset[x][y])`
         * List type can't supply type change
     2. According to the train/test percentage, split the dataset 
         * A ratio of 60/40 is applied in this code 
@@ -20,9 +20,9 @@
 
 ### 3. Neighbors
 * getNeighbors
-    1. User input k
-    2. Use aready exists euclideanDistance function to get the similarity from training instances and testing instances
-        * All training_examples for using for one test_example
+    1. Users input k
+    2. Using already exists euclideanDistance function to get the similarity from training instances and testing instances
+        * All training_examples to use for one test_example
         * `distance.append` pairs of `(training_example[x], distance)`
         * `sort(key=operator.itemgetter(1))` will give: 
         A *function* that grabs the *index=1* item from a list-like object
@@ -34,9 +34,7 @@
 * getResponse
     1.  Allowing each neighbor to vote for their class attribute, and take the majority vote as the prediction.
         * Assumes that the class is the last attribite for each neighbor
-        * 
         * In python3, use `dict.items()` instead of `dict.iteritems()`
-    2. 
 
 ### 5. Accuracy
 * getAccuracy
